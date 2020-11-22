@@ -1,0 +1,60 @@
+
+/* Style CSS for page register.html */
+
+html *
+{font-family: "Arial";}
+input:focus
+{background: lightgrey;}
+h1
+{color: cadetblue;}
+a:hover
+{color: cadetblue; text-decoration: none;}
+
+
+div#main {
+    margin: auto;
+    width: 30%;
+    background: aliceblue;
+    padding: 05px 20px;
+}
+
+input[type=text] {
+    width:100%;
+    padding: 05px 20px;
+    margin: 10px 0px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=password] {
+    width:100%;
+    padding: 05px 20px;
+    margin: 10px 0px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=radio] {
+    margin: 10px 0px;
+}
+select {
+    width:100%;
+    padding: 05px 20px;
+
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=submit] {
+    width:100%;
+    padding: 07px 40px;
+    background: cadetblue;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+
+*.bold {font-weight: bold }
+
