@@ -3,16 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Register</title>
-
     <link rel="stylesheet" href="register.css">
-
-    <body>
-    <div id="main">
-        <h1> Register </h1>
-
-        <p class="bold">Please fill in this form to create an account</p>
-
-        <hr>
+    <script src="register.js" defer></script>
+<body>
+<div id="main">
+    <h1> Register </h1>
+    <p class="bold">Please fill in this form to create an account</p>
+    <hr>
 
         <form action="../admin/index.html" method="post" enctype="text/plain">
             <label class="bold"> Email <br>
@@ -25,7 +22,7 @@
             <hr>
 
             <label>
-                <p class="bold">Sex:</p>
+                <p class="bold" aria-required="true">Sex:</p>
                 <input type="radio" name="sex"> Male <br>
                 <input type="radio" name="sex"> Female <br>
             </label>
@@ -50,26 +47,20 @@
                     <option value="1990">1990</option>
                     <option value="1989">1989</option>
                     <option value="1988">1988</option>
-                    <option value="1987">1987</option>
-                    <option value="1986">1986</option>
-                    <option value="1985">1985</option>
-                    <option value="1984">1984</option>
-                    <option value="1983">1983</option>
-                    <option value="1982">1982</option>
-                    <option value="1981">1981</option>
-                    <option value="1980">1980</option>
+
                 </select>
             </label>
 
             <hr>
 
                 <p>By creating an account you agree to our <a href="../terms/terms.html"> Term&Privacy </a> </p>
-                <input type="checkbox" name="cb1" value="accept">I accept<br>
+                <input type="checkbox" id="term" onclick="checksAcceptance()">I accept<br>
 
-                <p><input type="submit" value="Register"></p>
+            <p><button id="submit" type="submit" disabled> Register </button></p>
         </form>
 
-        <p>Already have an account? <a href="../admin/login.html">Sing in</a></p>
+    <p>Already have an account? <a href="../admin/login.html">Sing in</a></p>
     </div>
-    </body>
+
+</body>
 </html>
