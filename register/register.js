@@ -29,7 +29,7 @@ function register(event) {
             console.log("Forms are not valid")
         }
     } else {
-        console.log("No every Form is filling.")
+        console.log("Need fill all forms")
     }
 }
 
@@ -51,7 +51,6 @@ function checkFillingForm(selectors) {
 
     console.log("Run CheckFillingForm Function");
     return isFilled;
-
 }
 
 function mailValidator(email) {
@@ -74,6 +73,8 @@ function passwordValidator(psw, pswConf) {
 
     if (password !== password_repeat) {
         valid = false;
+        document.getElementById(psw + "Clash").innerText = 'Password are different ';
+        document.getElementById(pswConf + "Clash").innerText = 'Password are different';
     }
 
     return valid;

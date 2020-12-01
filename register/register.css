@@ -63,5 +63,26 @@ button[type=submit] {
     box-sizing: border-box;
 }
 
+button {
+    background: cadetblue;
+    padding: 10px 20px;
+    border: 0px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+button:hover {
+    background: gray;
+    cursor: pointer;
+}
+
+button:hover:disabled {
+    cursor: not-allowed;
+}
+
+.ClashMessage {
+    color: red;
+}
+
 *.bold {font-weight: bold }
 
