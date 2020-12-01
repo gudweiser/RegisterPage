@@ -55,6 +55,13 @@ input[type=submit] {
     border-radius: 4px;
     box-sizing: border-box;
 }
+button[type=submit] {
+    width:100%;
+    padding: 07px 40px;
+    background: cadetblue;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
 
 *.bold {font-weight: bold }
 
