@@ -1,17 +1,24 @@
-
-/* Style CSS for page register.html */
-
 body {
-    font-family: "Arial";
+    font-family: "Lato";
     line-height: 1.5;
 }
 
-input:focus
-{background: lightgrey;}
-h1
-{color: cadetblue;}
-a:hover
-{color: cadetblue; text-decoration: none;}
+input:focus {
+    background: lightgrey
+}
+
+h1 {
+    color: cadetblue
+}
+
+a:link {
+    text-decoration: none;
+    color: black
+}
+
+a:hover {
+    color: cadetblue; text-decoration: none
+}
 
 div#main {
     margin: auto;
