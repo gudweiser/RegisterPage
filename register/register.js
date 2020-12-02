@@ -56,8 +56,13 @@ function checkFillingForm(selectors) {
 function mailValidator(email) {
     console.log("Run mailValidator Function");
 
-    let nameEmail = document.getElementById(email).value;
+    const nameEmail = document.getElementById(email).value;
+
     let re = new RegExp('(?:[a-z0-9!#$%&\'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&\'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\\])')
+
+    if (!re.test(nameEmail)) {
+        document.getElementById("emailClash").innerText = "Inncorect mail adress";
+    }
 
     return re.test(nameEmail);
 }
@@ -66,16 +71,16 @@ function passwordValidator(psw, pswConf) {
 
     console.log("Run passwordValidator Function");
 
-    let valid = true;
+    let isValid = true;
 
-    let password = document.getElementById(psw).value;
-    let password_repeat = document.getElementById(pswConf).value
+    const password = document.getElementById(psw).value;
+    const password_repeat = document.getElementById(pswConf).value
 
     if (password !== password_repeat) {
-        valid = false;
+        isValid = false;
         document.getElementById(psw + "Clash").innerText = 'Password are different ';
         document.getElementById(pswConf + "Clash").innerText = 'Password are different';
     }
 
-    return valid;
+    return isValid;
 }
